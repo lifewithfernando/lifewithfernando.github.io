@@ -1,7 +1,7 @@
 ---
 title: "[AWS]VPC Peering"
 date: 2020-02-17 16:39:28 -0400
-categories: aws toyproject 'vpc peering'
+categories: aws toyproject vpcpeering
 ---
 
 [AWS] VPC Peering
