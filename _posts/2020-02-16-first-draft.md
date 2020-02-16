@@ -1,18 +1,11 @@
 ---
-title: "First Draft for Testing AWS"
+title: "[AWS]VPC Peering"
 date: 2020-02-17 16:39:28 -0400
 categories: aws toyproject
 ---
 
-처음 시작하는 내용은 AWS에서 제공하는 서비스들을 사용해서 테스트망 구축 후에 테스트 내용 정리가 목적
-
-포스팅에 포함될 내용은 1. 구성도 2. 테스트 목적 3. 테스트 내용 4. 레퍼런스, 그리고 마지막으로 5. 결과
-
-
-내용 공유를 통해서 스스로의 기술 노팅을 통한 인사이트를 얻고, 나중에 이 노트를 보았을 때 뿌듯함을 느끼게 되리라.
-17일 할리스에서 바닐라딜라이트와 작업하면서..
-
 [AWS] VPC Peering
+
 다음은 해당 랩의 구성도이다.
 ![20200216_AWS_Topology](https://user-images.githubusercontent.com/61104317/74605836-f16bfe80-510e-11ea-8f62-2010c8bcc6b3.png)
 
