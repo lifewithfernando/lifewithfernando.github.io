@@ -25,54 +25,54 @@ API Gateway를 연결하기 위한 Lambda 생성해 줄 것이다.
 
 Lambda Function 페이지
 
-![01_lambda-function](https://user-images.githubusercontent.com/61104317/74759732-9aa42780-52bc-11ea-81cd-91350531203d.png)
+![01_lambda-function](https://user-images.githubusercontent.com/61104317/74764285-c5927980-52c4-11ea-8e27-bcf1266972ff.png)
 
 Function 생성
-![02_lambda-create-functions](https://user-images.githubusercontent.com/61104317/74759749-a0017200-52bc-11ea-977b-969ed9cd9454.png)
+![02_lambda-create-functions](https://user-images.githubusercontent.com/61104317/74764287-c75c3d00-52c4-11ea-97b1-0dafd9d6d4cf.png)
 
 Lambdaexample이라는 Function 생성
 - 생성된 Function을 API Gateway와 연결할 것이다
 - Trigger를 생성하여 'API Gateway' 선택
-![03_lambda-create-functions-completion](https://user-images.githubusercontent.com/61104317/74759770-a55ebc80-52bc-11ea-8d69-7945287b5cc4.png)
+![03_lambda-create-functions-completion](https://user-images.githubusercontent.com/61104317/74764289-ca572d80-52c4-11ea-9ec4-d78d1c85d584.png)
 
 API Gateway에서 새로운 API를 생성하고, API 종류는 REST API 선택
-![04_lambda-add-trigger](https://user-images.githubusercontent.com/61104317/74759776-a859ad00-52bc-11ea-8edb-3bb1d5013749.png)
+![04_lambda-add-trigger](https://user-images.githubusercontent.com/61104317/74764291-cc20f100-52c4-11ea-83d4-3702965b1736.png)
 
 API Gateway 설정 완료
-![05_labmda-trigger-apigw](https://user-images.githubusercontent.com/61104317/74759792-b0195180-52bc-11ea-8bd3-fb1e11bb4840.png)
+![05_labmda-trigger-apigw](https://user-images.githubusercontent.com/61104317/74764298-cdeab480-52c4-11ea-9803-58577105a3fb.png)
 
 Event로 발생시킬 테스트 설정
 - Resource의 'ANY'로 되어 있는 부분은 어떤 HTTP Method를 사용할 것인지에 대한 설정. 리소스 추가해서 HTTP Method, Get을 사용해서 테스트 진행
-![06_labmda-event-template](https://user-images.githubusercontent.com/61104317/74759802-b4de0580-52bc-11ea-8282-ef4d3e942720.png)
+![06_labmda-event-template](https://user-images.githubusercontent.com/61104317/74764307-d04d0e80-52c4-11ea-923c-3b15f6fdc73b.png)
 
 Integration Request 설정에 들어가서 Proxy 체크 해제
-![08_apigw-proxy해제](https://user-images.githubusercontent.com/61104317/74759829-bf989a80-52bc-11ea-9228-1e39d9bde4ec.png)
+![08_apigw-proxy해제](https://user-images.githubusercontent.com/61104317/74764320-d6db8600-52c4-11ea-8e65-daa6f0d44368.png)
 
 API Gateway Test
 - Response Body에 URL을 접속했을 때 응답할 결과 값을 보여줌
-![09_apigw-test](https://user-images.githubusercontent.com/61104317/74759840-c32c2180-52bc-11ea-860d-96c8efec653a.png)
+![09_apigw-test](https://user-images.githubusercontent.com/61104317/74764324-d9d67680-52c4-11ea-9d0d-295413ea9bfa.png)
 
 다음의 보이는 주소로 접속해서 테스트 결과값 확인
-![10_apigw-urltest](https://user-images.githubusercontent.com/61104317/74759844-c58e7b80-52bc-11ea-9769-0fa453a8bf0a.png)
+![10_apigw-urltest](https://user-images.githubusercontent.com/61104317/74764338-dd69fd80-52c4-11ea-9a9e-07c26e06cad9.png)
 
 URL 확인
 - 테스트 이벤트로 설정한 람다 값이 호출 되는 것을 확인 "Hello from Lambda!"
-![11_apigw-urloutput](https://user-images.githubusercontent.com/61104317/74759857-ca532f80-52bc-11ea-95ec-93357fab3f94.png)
+![11_apigw-urloutput](https://user-images.githubusercontent.com/61104317/74764340-df33c100-52c4-11ea-8cb7-05e2c521473a.png)
 
 API Gateway로 돌아와서, 다른 경로에 대한 요청 응답을 위한 새 리소스 추가
-![12_apigw-create-resource](https://user-images.githubusercontent.com/61104317/74759866-cde6b680-52bc-11ea-8681-4c794cfe0ab0.png)
+![12_apigw-create-resource](https://user-images.githubusercontent.com/61104317/74764345-e0fd8480-52c4-11ea-8d0c-733a6d013c09.png)
 
 이름을 'Netflixapigw101'로 지정
-![13_apigw-resource-netflixapigw101](https://user-images.githubusercontent.com/61104317/74759877-d3440100-52bc-11ea-8ef7-43a7216da1fc.png)
+![13_apigw-resource-netflixapigw101](https://user-images.githubusercontent.com/61104317/74764349-e2c74800-52c4-11ea-88eb-0c9fb2ed5b2b.png)
 
 리소스 'Netflixapigw101'에 HTTP Method 'Get'추가 후 Lambda Function은 기존에 만들어 놓은 것으로 설정
-![14_apigw-method-get](https://user-images.githubusercontent.com/61104317/74759882-d5a65b00-52bc-11ea-9960-a45937df02d7.png)
+![14_apigw-method-get](https://user-images.githubusercontent.com/61104317/74764362-e8bd2900-52c4-11ea-9fe8-78f22e02a168.png)
 
 설정 완료되고 난 후의 API 주소 확인
-![15_apigw-createdone](https://user-images.githubusercontent.com/61104317/74759889-d8a14b80-52bc-11ea-9ae3-bbe164b3cd95.png)
+![15_apigw-createdone](https://user-images.githubusercontent.com/61104317/74764368-ea86ec80-52c4-11ea-8ca9-e2890548e430.png)
 
 API Gateway에서 Staging 설정을 'prod'로 설정 후 URL 정상 요청 확인
-![16_apigw-prod](https://user-images.githubusercontent.com/61104317/74759895-db03a580-52bc-11ea-8cbd-3b02a3bb1e83.png)
+![16_apigw-prod](https://user-images.githubusercontent.com/61104317/74764373-ec50b000-52c4-11ea-879d-fbd3faefd645.png)
 
 
 사용자 요청을 API Gateway가 받고 요청한 해당 마이크로 서비스가 응답을 API Gateway로 돌려주고
