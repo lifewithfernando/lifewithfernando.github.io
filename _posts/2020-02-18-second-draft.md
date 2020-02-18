@@ -15,7 +15,8 @@ AWS에서 제공하는 서비스를 이용한 서비스 모델인 Netflix의 아
 이번 테스트에 마이크로 서비스 관련 부분은 추가하지 않았기 때문에 해당 부분은 무시해도 된다
 최종적으로 서비스들을 다 합쳤을 때, 서비스가 이루어지는 그림을 그리고 싶어서 표현해 놓은 것이다
 
-![20200218_topology](https://user-images.githubusercontent.com/61104317/74768598-34270580-52cc-11ea-8766-3d99bfc840d2.png)
+<img width="799" alt="20200218_topology" src="https://user-images.githubusercontent.com/61104317/74769033-f8d90680-52cc-11ea-81e9-b40ac36e24a1.png">
+
 
 
 1. API Gateway
