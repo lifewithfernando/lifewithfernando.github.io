@@ -1,0 +1,17 @@
+---
+title: "[AWS] API Gateway 101"
+date: 2020-02-17 16:39:28 -0400
+categories: aws toyproject apigateway lambdafunction
+---
+
+[AWS] API Gateway
+
+
+Netflix의 서비스 모델 따라잡기 프로젝트 101
+
+AWS에서 제공하는 서비스를 이용한 서비스 모델인 Netflix의 아키텍쳐를 하나씩 살펴보고
+최종적으로 모든 서비스들을 통합해서 확인해 보려고 한다.
+
+1. API Gateway
+
+  -
