@@ -57,10 +57,10 @@ API Gateway 설정 완료
 
 Event로 발생시킬 테스트 설정
 
-Resource의 'ANY'로 되어 있는 부분은 어떤 HTTP Method를 사용할 것인지에 대한 설정. 리소스 추가해서 HTTP Method, Get을 사용해서 테스트 진행
 ![06_labmda-event-template](https://user-images.githubusercontent.com/61104317/74764307-d04d0e80-52c4-11ea-923c-3b15f6fdc73b.png)
 
 Integration Request 설정에 들어가서 Proxy 체크 해제
+Resource의 'ANY'로 되어 있는 부분은 어떤 HTTP Method를 사용할 것인지에 대한 설정. 리소스 추가해서 HTTP Method, Get을 사용해서 테스트 진행
 
 ![08_apigw-proxy해제](https://user-images.githubusercontent.com/61104317/74764320-d6db8600-52c4-11ea-8e65-daa6f0d44368.png)
 
