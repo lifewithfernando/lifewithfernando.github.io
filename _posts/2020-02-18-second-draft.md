@@ -38,50 +38,63 @@ Lambda Function 페이지
 ![01_lambda-function](https://user-images.githubusercontent.com/61104317/74764285-c5927980-52c4-11ea-8e27-bcf1266972ff.png)
 
 Function 생성
+
 ![02_lambda-create-functions](https://user-images.githubusercontent.com/61104317/74764287-c75c3d00-52c4-11ea-97b1-0dafd9d6d4cf.png)
 
 Lambdaexample이라는 Function 생성
-- 생성된 Function을 API Gateway와 연결할 것이다
+- 생성된 Function을 API Gateway와 연결할 것이다.
 - Trigger를 생성하여 'API Gateway' 선택
+
 ![03_lambda-create-functions-completion](https://user-images.githubusercontent.com/61104317/74764289-ca572d80-52c4-11ea-9ec4-d78d1c85d584.png)
 
 API Gateway에서 새로운 API를 생성하고, API 종류는 REST API 선택
+
 ![04_lambda-add-trigger](https://user-images.githubusercontent.com/61104317/74764291-cc20f100-52c4-11ea-83d4-3702965b1736.png)
 
 API Gateway 설정 완료
+
 ![05_labmda-trigger-apigw](https://user-images.githubusercontent.com/61104317/74764298-cdeab480-52c4-11ea-9803-58577105a3fb.png)
 
 Event로 발생시킬 테스트 설정
-- Resource의 'ANY'로 되어 있는 부분은 어떤 HTTP Method를 사용할 것인지에 대한 설정. 리소스 추가해서 HTTP Method, Get을 사용해서 테스트 진행
+Resource의 'ANY'로 되어 있는 부분은 어떤 HTTP Method를 사용할 것인지에 대한 설정. 리소스 추가해서 HTTP Method, Get을 사용해서 테스트 진행
 ![06_labmda-event-template](https://user-images.githubusercontent.com/61104317/74764307-d04d0e80-52c4-11ea-923c-3b15f6fdc73b.png)
 
 Integration Request 설정에 들어가서 Proxy 체크 해제
+
 ![08_apigw-proxy해제](https://user-images.githubusercontent.com/61104317/74764320-d6db8600-52c4-11ea-8e65-daa6f0d44368.png)
 
 API Gateway Test
 - Response Body에 URL을 접속했을 때 응답할 결과 값을 보여줌
+
 ![09_apigw-test](https://user-images.githubusercontent.com/61104317/74764324-d9d67680-52c4-11ea-9d0d-295413ea9bfa.png)
 
 다음의 보이는 주소로 접속해서 테스트 결과값 확인
+
 ![10_apigw-urltest](https://user-images.githubusercontent.com/61104317/74764338-dd69fd80-52c4-11ea-9a9e-07c26e06cad9.png)
 
 URL 확인
 - 테스트 이벤트로 설정한 람다 값이 호출 되는 것을 확인 "Hello from Lambda!"
+
 ![11_apigw-urloutput](https://user-images.githubusercontent.com/61104317/74764340-df33c100-52c4-11ea-8cb7-05e2c521473a.png)
 
 API Gateway로 돌아와서, 다른 경로에 대한 요청 응답을 위한 새 리소스 추가
+
 ![12_apigw-create-resource](https://user-images.githubusercontent.com/61104317/74764345-e0fd8480-52c4-11ea-8d0c-733a6d013c09.png)
 
 이름을 'Netflixapigw101'로 지정
+
 ![13_apigw-resource-netflixapigw101](https://user-images.githubusercontent.com/61104317/74764349-e2c74800-52c4-11ea-88eb-0c9fb2ed5b2b.png)
 
 리소스 'Netflixapigw101'에 HTTP Method 'Get'추가 후 Lambda Function은 기존에 만들어 놓은 것으로 설정
+
 ![14_apigw-method-get](https://user-images.githubusercontent.com/61104317/74764362-e8bd2900-52c4-11ea-9fe8-78f22e02a168.png)
 
 설정 완료되고 난 후의 API 주소 확인
+
 ![15_apigw-createdone](https://user-images.githubusercontent.com/61104317/74764368-ea86ec80-52c4-11ea-8ca9-e2890548e430.png)
 
 API Gateway에서 Staging 설정을 'prod'로 설정 후 URL 정상 요청 확인
+
 ![16_apigw-prod](https://user-images.githubusercontent.com/61104317/74764373-ec50b000-52c4-11ea-879d-fbd3faefd645.png)
 
 
