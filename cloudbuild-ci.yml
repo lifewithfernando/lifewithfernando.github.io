@@ -1,11 +1,11 @@
 # cloudbuild-ci.yaml
 
 steps:
-  - name: docker.io/libraroy/python:3.7
+  - name: docker.io/library/python:3.7
     id: Check code style
     entrypoint: /bin/sh
     args:
       - -c
       - >-
-        pip install black=19.10b0 &&
+        pip install black==19.10b0 &&
         black --check app.py
