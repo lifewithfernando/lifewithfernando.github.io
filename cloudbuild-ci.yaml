@@ -7,5 +7,5 @@ steps:
     args:
       - -c
       - >-
-        pip install black=19.10b0 &&
+        pip install black==19.10b0 &&
         black --check app.py
