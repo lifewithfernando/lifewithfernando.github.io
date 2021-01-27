@@ -1,7 +1,7 @@
 # cloudbuild-ci.yaml
 
 steps:
-  - name: docker.io/libraroy/python:3.7
+  - name: docker.io/library/python:3.7
     id: Check code style
     entrypoint: /bin/sh
     args:
