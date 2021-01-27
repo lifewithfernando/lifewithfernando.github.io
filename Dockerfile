@@ -1,6 +1,6 @@
 # Dockerfile
 
-FROM python:3.7.9-fernando
+FROM python:3.7.9-slim
 
 MAINTAINER animofernando@gmail.com
 
